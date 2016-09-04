@@ -1,11 +1,12 @@
 # Leaflet.ParallaxMarker
 
-Markers that move with a parallax effect in relation to the base map. See demos.
+Markers that move with a parallax effect in relation to the base map.
 
-## Demos
 
-** Clouds **
-https://dagjomar.github.io/Leaflet.ParallaxMarker/examples/clouds.html
+## Demos / Examples
+See demos/examples at [https://dagjomar.github.io/Leaflet.ParallaxMarker/](https://dagjomar.github.io/Leaflet.ParallaxMarker/).
 
-** Floating Labels **
-Floating Labels: https://dagjomar.github.io/Leaflet.ParallaxMarker/examples/clouds.html
+
+![Screencapture GIF](examples/leaflet.parallaxmarker.demo.floatinglabels.gif)
+
+![Screencapture GIF](examples/leaflet-parallaxmarker-demo-clouds-small.gif)
