@@ -10,3 +10,7 @@ See demos/examples at [https://dagjomar.github.io/Leaflet.ParallaxMarker/](https
 ![Screencapture GIF](examples/leaflet.parallaxmarker.demo.floatinglabels.gif)
 
 ![Screencapture GIF](examples/leaflet-parallaxmarker-demo-clouds-small.gif)
+
+
+## TODO
+- Make things work smoother on zoom animation
