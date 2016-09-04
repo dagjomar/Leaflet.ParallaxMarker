@@ -30,7 +30,7 @@
 <script>
 
     var center = {lat: 63.417103647850126, lng: 10.403537750244142};
-    var map = L.map('map').setView(center, 14);
+    var map = L.map('map', {scrollWheelZoom: false, doubleClickZoom: false, boxZoom: false, touchZoom: false}).setView(center, 14);
 
     var basemap = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
         errorTileUrl: 'https://tiles.mazemap.com/v1/default.png',
