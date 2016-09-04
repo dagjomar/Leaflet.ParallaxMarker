@@ -34,6 +34,9 @@ a {
   background-color: rgba(255, 255, 255, 0.2);
   border-color: rgba(255, 255, 255, 0.3); }
 
+
+iframe{ border: 1px solid rgb(194, 205, 208); width: 100%; height: 400px;}
+
 @media screen and (min-width: 64em) {
   .btn {
     padding: 0.75rem 1rem; } }
@@ -199,7 +202,7 @@ a {
 .main-content hr {
   height: 2px;
   padding: 0;
-  margin: 1rem 0;
+  margin: 4rem 0;
   background-color: #eff0f1;
   border: 0; }
 
