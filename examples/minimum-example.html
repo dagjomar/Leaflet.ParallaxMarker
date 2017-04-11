@@ -1,0 +1,66 @@
+<html>
+<head>
+    <title>Floating Label | Leaflet.Marker.Parallax Demo</title>
+    <meta name="author" content="Dag Jomar Mersland">
+    <link rel="stylesheet" href="https://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
+    <script src="https://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+    <script src="../Leaflet.Marker.Parallax.js"></script>
+
+    <style>
+        #map { width: 100%; height: 100%; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; }
+
+        .parallax-marker.label{
+            display: block;
+            text-align: center;
+            font-weight: bold;
+            color: rgb(98, 56, 128);
+            text-transform: uppercase;
+            text-shadow: rgb(255, 255, 255) 1px 0px 1px, rgb(255, 255, 255) -1px 0px 1px, rgb(255, 255, 255) 0px -1px 1px, rgb(255, 255, 255) 0px 1px 1px;
+        }
+        .parallax-marker.label.huge{ font-size: 96px; color: rgba(185, 157, 185, 0.39); text-shadow: none;}
+        .parallax-marker.label.big{ font-size: 24px; }
+        .parallax-marker.label.medium{ font-size: 16px; color: rgb(121, 85, 125); font-weight: normal;}
+        .parallax-marker.label.small{  font-size: 12px; text-transform: none; font-weight: normal; color: rgb(137, 128, 144); }
+    </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<script>
+
+    var center = {lat: 63.417103647850126, lng: 10.403537750244142};
+    var map = L.map('map', {scrollWheelZoom: false, doubleClickZoom: false, boxZoom: false, touchZoom: false}).setView(center, 14);
+
+    var basemap = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+        errorTileUrl: 'https://tiles.mazemap.com/v1/default.png',
+        tileSize: 256,
+        attribution: '<a href="https://www.mapzen.com/rights">Attribution</a>. Data &copy;<a href="https://openstreetmap.org/copyright">OSM</a> contributors.',
+        maxZoom : 19,
+        subdomains: 'abcd',
+        minZoom : 11,
+        zIndex: 1,
+        updateWhenIdle: false
+    }).addTo(map);
+
+    /*
+        The option property `parallaxZoffset` determines HOW MUCH of a parallax effect you want.
+        A higher number, means more effect.
+        0 means it will be stationary on the map, as in no effect at all
+    */
+
+    /*
+        The following example will stack a bunch of markers on top of each other in the z-axis
+        Notice that the offset doubles by a factor of 2 for a nice realistic effect
+    */
+    L.Marker.parallax(center,{ parallaxZoffset: 0}).addTo(map);
+    L.Marker.parallax(center,{ parallaxZoffset: 2}).addTo(map);
+    L.Marker.parallax(center,{ parallaxZoffset: 4}).addTo(map);
+    L.Marker.parallax(center,{ parallaxZoffset: 8}).addTo(map);
+    L.Marker.parallax(center,{ parallaxZoffset: 16}).addTo(map);
+    L.Marker.parallax(center,{ parallaxZoffset: 32}).addTo(map);
+
+
+</script>
+</body>
+</html>
