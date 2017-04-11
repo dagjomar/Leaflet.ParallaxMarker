@@ -1,4 +1,4 @@
-L.ParallaxMarker = L.Marker.extend({
+L.Marker.Parallax = L.Marker.extend({
 
     _initIcon: function () {
         L.Marker.prototype._initIcon.call(this);
@@ -110,4 +110,4 @@ L.ParallaxMarker = L.Marker.extend({
     }
 });
 
-L.parallaxMarker = function(latlng, opts){ return new L.ParallaxMarker(latlng, opts); };
+L.Marker.parallax = function(latlng, opts){ return new L.Marker.Parallax(latlng, opts); };
