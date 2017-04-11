@@ -1,10 +1,10 @@
 <html>
 <head>
-    <title>Floating Label | Leaflet.ParallaxMarker Demo</title>
+    <title>Floating Label | Leaflet.Marker.Parallax Demo</title>
     <meta name="author" content="Dag Jomar Mersland">
     <link rel="stylesheet" href="https://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
     <script src="https://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
-    <script src="../Leaflet.ParallaxMarker.js"></script>
+    <script src="../Leaflet.Marker.Parallax.js"></script>
 
     <style>
         #map { width: 100%; height: 100%; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; }
@@ -56,7 +56,7 @@
 
     for(var i = 0; i < textMarkersBig.length; i++){
         var icon =  L.divIcon({className: 'parallax-marker label big', html: textMarkersBig[i].html, iconSize: [200, 36], iconAnchor: [100, 18]});
-        L.parallaxMarker(textMarkersBig[i].latlng,{icon: icon, parallaxZoffset: 4}).addTo(map);
+        L.Marker.parallax(textMarkersBig[i].latlng,{icon: icon, parallaxZoffset: 4}).addTo(map);
     }
 
     var textMarkersMedium = [
@@ -73,7 +73,7 @@
 
     for(var i = 0; i < textMarkersMedium.length; i++){
         var icon =  L.divIcon({className: 'parallax-marker label medium', html: textMarkersMedium[i].html, iconSize: [200, 36], iconAnchor: [100, 18]});
-        L.parallaxMarker(textMarkersMedium[i].latlng,{icon: icon, parallaxZoffset: 1}).addTo(map);
+        L.Marker.parallax(textMarkersMedium[i].latlng,{icon: icon, parallaxZoffset: 1}).addTo(map);
     }
 
 
@@ -91,7 +91,7 @@
 
     for(var i = 0; i < textMarkersSmall.length; i++){
         var icon =  L.divIcon({className: 'parallax-marker label small', html: textMarkersSmall[i].html, iconSize: [200, 36], iconAnchor: [100, 18]});
-        L.parallaxMarker(textMarkersSmall[i].latlng,{icon: icon, parallaxZoffset: 0.2}).addTo(map);
+        L.Marker.parallax(textMarkersSmall[i].latlng,{icon: icon, parallaxZoffset: 0.2}).addTo(map);
     }
 
     var textMarkersHuge = [
@@ -102,7 +102,7 @@
 
     for(var i = 0; i < textMarkersHuge.length; i++){
         var icon =  L.divIcon({className: 'parallax-marker label huge', html: textMarkersHuge[i].html, iconSize: [200, 36], iconAnchor: [100, 18]});
-        L.parallaxMarker(textMarkersHuge[i].latlng,{icon: icon, parallaxZoffset: 6}).addTo(map);
+        L.Marker.parallax(textMarkersHuge[i].latlng,{icon: icon, parallaxZoffset: 6}).addTo(map);
     }
 
 

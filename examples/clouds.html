@@ -1,10 +1,10 @@
 <html>
 <head>
-    <title>Clouds | Leaflet.ParallaxMarker Demo</title>
+    <title>Clouds | Leaflet.Marker.Parallax Demo</title>
     <meta name="author" content="Dag Jomar Mersland">
     <link rel="stylesheet" href="https://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
     <script src="https://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
-    <script src="../Leaflet.ParallaxMarker.js"></script>
+    <script src="../Leaflet.Marker.Parallax.js"></script>
 
     <style>
         #map { width: 100%; height: 100%; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; }
@@ -46,7 +46,7 @@
 
     for(var i = 0; i < cloudsMedium.length; i++){
         var icon =  L.divIcon({className: 'parallax-cloud medium',  html: '<img src="cloud.png" width="152" height="84">', iconSize: [152, 84], iconAnchor: [76, 42]});
-        L.parallaxMarker(cloudsMedium[i].latlng,{icon: icon, parallaxZoffset: 2, opacity: 0.6}).addTo(map);
+        L.Marker.parallax(cloudsMedium[i].latlng,{icon: icon, parallaxZoffset: 2, opacity: 0.6}).addTo(map);
     }
 
     var cloudsBig = [
@@ -60,7 +60,7 @@
 
     for(var i = 0; i < cloudsBig.length; i++){
         var icon =  L.divIcon({className: 'parallax-cloud big',  html: '<img src="sun.png" width="110" height="110">', iconSize: [200, 110], iconAnchor: [100, 55]});
-        L.parallaxMarker(cloudsBig[i].latlng,{icon: icon, parallaxZoffset: 10, opacity: 0.4}).addTo(map);
+        L.Marker.parallax(cloudsBig[i].latlng,{icon: icon, parallaxZoffset: 10, opacity: 0.4}).addTo(map);
     }
 
 
@@ -72,7 +72,7 @@
 
     for(var i = 0; i < cloudsHuge.length; i++){
         var icon =  L.divIcon({className: 'parallax-cloud huge',  html: '<img src="cloud.png" width="600" height="330">', iconSize: [600, 330], iconAnchor: [300, 165]});
-        L.parallaxMarker(cloudsHuge[i].latlng,{icon: icon, parallaxZoffset: 20, opacity: 0.3}).addTo(map);
+        L.Marker.parallax(cloudsHuge[i].latlng,{icon: icon, parallaxZoffset: 20, opacity: 0.3}).addTo(map);
     }
 
     //map.setCenter(paraMarker.getLatLng());
