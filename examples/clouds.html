@@ -45,7 +45,7 @@
 
 
     for(var i = 0; i < cloudsMedium.length; i++){
-        var icon =  L.divIcon({className: 'parallax-cloud medium',  html: '<img src="http://pngimg.com/upload/cloud_PNG27.png" width="152" height="84">', iconSize: [152, 84], iconAnchor: [76, 42]});
+        var icon =  L.divIcon({className: 'parallax-cloud medium',  html: '<img src="cloud.png" width="152" height="84">', iconSize: [152, 84], iconAnchor: [76, 42]});
         L.parallaxMarker(cloudsMedium[i].latlng,{icon: icon, parallaxZoffset: 2, opacity: 0.6}).addTo(map);
     }
 
@@ -59,7 +59,7 @@
     ]
 
     for(var i = 0; i < cloudsBig.length; i++){
-        var icon =  L.divIcon({className: 'parallax-cloud big',  html: '<img src="http://pngimg.com/upload/cloud_PNG27.png" width="200" height="110">', iconSize: [200, 110], iconAnchor: [100, 55]});
+        var icon =  L.divIcon({className: 'parallax-cloud big',  html: '<img src="sun.png" width="110" height="110">', iconSize: [200, 110], iconAnchor: [100, 55]});
         L.parallaxMarker(cloudsBig[i].latlng,{icon: icon, parallaxZoffset: 10, opacity: 0.4}).addTo(map);
     }
 
@@ -71,7 +71,7 @@
     ]
 
     for(var i = 0; i < cloudsHuge.length; i++){
-        var icon =  L.divIcon({className: 'parallax-cloud huge',  html: '<img src="http://pngimg.com/upload/cloud_PNG27.png" width="600" height="330">', iconSize: [600, 330], iconAnchor: [300, 165]});
+        var icon =  L.divIcon({className: 'parallax-cloud huge',  html: '<img src="cloud.png" width="600" height="330">', iconSize: [600, 330], iconAnchor: [300, 165]});
         L.parallaxMarker(cloudsHuge[i].latlng,{icon: icon, parallaxZoffset: 20, opacity: 0.3}).addTo(map);
     }
 
