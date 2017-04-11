@@ -38,6 +38,28 @@
 
       <a href="https://dagjomar.github.io/Leaflet.ParallaxMarker/examples/clouds.html" target="_blank">https://dagjomar.github.io/Leaflet.ParallaxMarker/examples/clouds.html</a>
 
+      <hr />
+
+      <h3><a id="demo-minimum-example" class="anchor" href="#demo-minimum-example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Minimum Example</h3>
+
+      <p>The following example will stack a bunch of markers on top of each other in the z-axis</p>
+      <p>Notice that the offset doubles by a factor of 2 for a nice realistic effect</p>
+      <p>This minimum example shows how to place a few markers with different options for parallax effect</p>
+
+      <pre>
+    var center = {lat: 63.417103647850126, lng: 10.403537750244142};
+
+    L.Marker.parallax(center,{ parallaxZoffset: 0}).addTo(map);
+    L.Marker.parallax(center,{ parallaxZoffset: 2}).addTo(map);
+    L.Marker.parallax(center,{ parallaxZoffset: 4}).addTo(map);
+    L.Marker.parallax(center,{ parallaxZoffset: 8}).addTo(map);
+    L.Marker.parallax(center,{ parallaxZoffset: 16}).addTo(map);
+    L.Marker.parallax(center,{ parallaxZoffset: 32}).addTo(map);</pre>
+
+      <iframe src="https://dagjomar.github.io/Leaflet.ParallaxMarker/examples/minimum-example.html"></iframe>
+
+      <a href="https://dagjomar.github.io/Leaflet.ParallaxMarker/examples/minimum-example.html" target="_blank">https://dagjomar.github.io/Leaflet.ParallaxMarker/examples/minimum-example.html</a>
+
 
       <br /><br /><br />
 
