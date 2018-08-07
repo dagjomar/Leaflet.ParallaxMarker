@@ -33,7 +33,6 @@
     var map = L.map('map', {scrollWheelZoom: false, doubleClickZoom: false, boxZoom: false, touchZoom: false}).setView(center, 14);
 
     var basemap = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
-        errorTileUrl: 'https://tiles.mazemap.com/v1/default.png',
         tileSize: 256,
         attribution: '<a href="https://www.mapzen.com/rights">Attribution</a>. Data &copy;<a href="https://openstreetmap.org/copyright">OSM</a> contributors.',
         maxZoom : 19,
