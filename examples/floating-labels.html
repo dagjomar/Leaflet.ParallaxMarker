@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>Floating Label | Leaflet.Marker.Parallax Demo</title>
@@ -30,78 +31,78 @@
 <script>
 
     var center = {lat: 63.417103647850126, lng: 10.403537750244142};
-    var map = L.map('map', {scrollWheelZoom: false, doubleClickZoom: false, boxZoom: false, touchZoom: false}).setView(center, 14);
+    var map = L.map(`map`, {scrollWheelZoom: false, doubleClickZoom: false, boxZoom: false, touchZoom: false}).setView(center, 14);
 
-    var basemap = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+    var basemap = L.tileLayer(`https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png`, {
         tileSize: 256,
-        attribution: '<a href="https://www.mapzen.com/rights">Attribution</a>. Data &copy;<a href="https://openstreetmap.org/copyright">OSM</a> contributors.',
+        attribution: `<a href="https://www.mapzen.com/rights">Attribution</a>. Data &copy;<a href="https://openstreetmap.org/copyright">OSM</a> contributors.`,
         maxZoom : 19,
-        subdomains: 'abcd',
+        subdomains: `abcd`,
         minZoom : 11,
         zIndex: 1,
         updateWhenIdle: false
     }).addTo(map);
 
-    map.on('click', function(e){ console.log('e', e.latlng);});
+    map.on(`click`, function(e){ console.log(`e`, e.latlng);});
 
-    var textMarkersBig = [
-        {'html': 'Hello Map', latlng: {lat: 63.417103647850126, lng: 10.403537750244142} },
-        {'html': 'How are you', latlng: {lat: 63.42241313946417, lng: 10.41984558105469} },
-        {'html': 'I\'m fine', latlng: {lat: 63.41611461038977, lng: 10.427742004394533} },
-        {'html': 'Floating Labels', latlng: {lat: 63.427481682164895, lng: 10.387144088745119} },
-        {'html': 'Another one', latlng: {lat: 63.409661023646464, lng: 10.39212226867676} },
-        {'html': 'Real Word Cloud', latlng: {lat: 63.413963576186994, lng: 10.37238121032715} }
+    var textMarkersBigs = [
+        {html: `Hello Map`, latlng: {lat: 63.417103647850126, lng: 10.403537750244142} },
+        {html: `How are you`, latlng: {lat: 63.42241313946417, lng: 10.41984558105469} },
+        {html: `I\'m fine`, latlng: {lat: 63.41611461038977, lng: 10.427742004394533} },
+        {html: `Floating Labels`, latlng: {lat: 63.427481682164895, lng: 10.387144088745119} },
+        {html: `Another one`, latlng: {lat: 63.409661023646464, lng: 10.39212226867676} },
+        {html: `Real Word Cloud`, latlng: {lat: 63.413963576186994, lng: 10.37238121032715} }
     ]
 
-    for(var i = 0; i < textMarkersBig.length; i++){
-        var icon =  L.divIcon({className: 'parallax-marker label big', html: textMarkersBig[i].html, iconSize: [200, 36], iconAnchor: [100, 18]});
-        L.Marker.parallax(textMarkersBig[i].latlng,{icon: icon, parallaxZoffset: 4}).addTo(map);
+    for(let textMarkersBig of textMarkersBigs){
+        var icon =  L.divIcon({className: 'parallax-marker label big', html: textMarkersBig.html, iconSize: [200, 36], iconAnchor: [100, 18]});
+        L.Marker.parallax(textMarkersBig.latlng,{icon: icon, parallaxZoffset: 4}).addTo(map);
     }
 
-    var textMarkersMedium = [
-        {'html': 'The quick', latlng: {lat: 63.42287395311381, lng: 10.387744903564455} },
-        {'html': 'Brown fox', latlng:  {lat: 63.42425634961289, lng: 10.40782928466797} },
-        {'html': 'Jumps over', latlng: {lat: 63.419648101985715, lng: 10.42302131652832} },
-        {'html': 'The lazy', latlng: {lat: 63.412811170054, lng: 10.414695739746096} },
-        {'html': 'Dog', latlng: {lat: 63.411120890614214, lng: 10.387744903564455} },
-        {'html': 'The Foxy Dog', latlng:  {lat: 63.41911042483627, lng: 10.392723083496096} },
-        {'html': 'Crawls under', latlng:  {lat: 63.41672916195147, lng: 10.378475189208986} },
-        {'html': 'The doggy horse', latlng:   {lat: 63.42928617415903, lng: 10.40456771850586} }
+    var textMarkersMediums = [
+        {html: `The quick`, latlng: {lat: 63.42287395311381, lng: 10.387744903564455} },
+        {html: `Brown fox`, latlng:  {lat: 63.42425634961289, lng: 10.40782928466797} },
+        {html: `Jumps over`, latlng: {lat: 63.419648101985715, lng: 10.42302131652832} },
+        {html: `The lazy`, latlng: {lat: 63.412811170054, lng: 10.414695739746096} },
+        {html: `Dog`, latlng: {lat: 63.411120890614214, lng: 10.387744903564455} },
+        {html: `The Foxy Dog`, latlng:  {lat: 63.41911042483627, lng: 10.392723083496096} },
+        {html: `Crawls under`, latlng:  {lat: 63.41672916195147, lng: 10.378475189208986} },
+        {html: `The doggy horse`, latlng:   {lat: 63.42928617415903, lng: 10.40456771850586} }
     ]
 
 
-    for(var i = 0; i < textMarkersMedium.length; i++){
-        var icon =  L.divIcon({className: 'parallax-marker label medium', html: textMarkersMedium[i].html, iconSize: [200, 36], iconAnchor: [100, 18]});
-        L.Marker.parallax(textMarkersMedium[i].latlng,{icon: icon, parallaxZoffset: 1}).addTo(map);
+    for(let textMarkersMedium of textMarkersMediums){
+        var icon =  L.divIcon({className: 'parallax-marker label medium', html: textMarkersMedium.html, iconSize: [200, 36], iconAnchor: [100, 18]});
+        L.Marker.parallax(textMarkersMedium.latlng,{icon: icon, parallaxZoffset: 1}).addTo(map);
     }
 
 
-    var textMarkersSmall = [
-        {'html': 'Azgard', latlng: {lat: 63.42533150079501, lng: 10.396499633789064} },
-        {'html': 'Gotham', latlng: {lat: 63.42145308723281, lng: 10.411691665649416} },
-        {'html': 'Hoth', latlng: {lat: 63.41864955068167, lng: 10.423364639282228} },
-        {'html': 'Middle Earth', latlng: {lat: 63.414117226838805, lng: 10.41435241699219} },
-        {'html': 'Winterfell', latlng: {lat: 63.41292641275144, lng: 10.397529602050783} },
-        {'html': 'Oz', latlng:  {lat: 63.41085197333554, lng: 10.414524078369142} },
-        {'html': 'Diagon Alley', latlng:   {lat: 63.42160669775066, lng: 10.37590026855469} },
-        {'html': 'Hobbiton', latlng:  {lat: 63.42671377876622, lng: 10.411863327026369} },
-        {'html': 'Moria', latlng:   {lat: 63.40923841670723, lng: 10.378475189208986} }
+    var textMarkersSmalls = [
+        {html: `Azgard`, latlng: {lat: 63.42533150079501, lng: 10.396499633789064} },
+        {html: `Gotham`, latlng: {lat: 63.42145308723281, lng: 10.411691665649416} },
+        {html: `Hoth`, latlng: {lat: 63.41864955068167, lng: 10.423364639282228} },
+        {html: `Middle Earth`, latlng: {lat: 63.414117226838805, lng: 10.41435241699219} },
+        {html: `Winterfell`, latlng: {lat: 63.41292641275144, lng: 10.397529602050783} },
+        {html: `Oz`, latlng:  {lat: 63.41085197333554, lng: 10.414524078369142} },
+        {html: `Diagon Alley`, latlng:   {lat: 63.42160669775066, lng: 10.37590026855469} },
+        {html: `Hobbiton`, latlng:  {lat: 63.42671377876622, lng: 10.411863327026369} },
+        {html: `Moria`, latlng:   {lat: 63.40923841670723, lng: 10.378475189208986} }
     ]
 
-    for(var i = 0; i < textMarkersSmall.length; i++){
-        var icon =  L.divIcon({className: 'parallax-marker label small', html: textMarkersSmall[i].html, iconSize: [200, 36], iconAnchor: [100, 18]});
-        L.Marker.parallax(textMarkersSmall[i].latlng,{icon: icon, parallaxZoffset: 0.2}).addTo(map);
+    for (let textMarkersSmall of textMarkersSmalls){
+        var icon =  L.divIcon({className: 'parallax-marker label small', html: textMarkersSmall.html, iconSize: [200, 36], iconAnchor: [100, 18]});
+        L.Marker.parallax(textMarkersSmall.latlng,{icon: icon, parallaxZoffset: 0.2}).addTo(map);
     }
 
-    var textMarkersHuge = [
-        {'html': 'Mordi', latlng:  {lat: 63.41100564066071, lng: 10.409631729125978} },
-        {'html': 'Fardin', latlng:  {lat: 63.42056981078019, lng: 10.370063781738281} },
-        {'html': 'Brordin', latlng:  {lat: 63.42602264811434, lng: 10.4205322265625} },
+    var textMarkersHuges = [
+        {html: `Mordi`, latlng:  {lat: 63.41100564066071, lng: 10.409631729125978} },
+        {html: `Fardin`, latlng:  {lat: 63.42056981078019, lng: 10.370063781738281} },
+        {html: `Brordin`, latlng:  {lat: 63.42602264811434, lng: 10.4205322265625} },
     ]
 
-    for(var i = 0; i < textMarkersHuge.length; i++){
-        var icon =  L.divIcon({className: 'parallax-marker label huge', html: textMarkersHuge[i].html, iconSize: [200, 36], iconAnchor: [100, 18]});
-        L.Marker.parallax(textMarkersHuge[i].latlng,{icon: icon, parallaxZoffset: 6}).addTo(map);
+    for(let textMarkersHuge of textMarkersHuges){
+        var icon =  L.divIcon({className: 'parallax-marker label huge', html: textMarkersHuge.html, iconSize: [200, 36], iconAnchor: [100, 18]});
+        L.Marker.parallax(textMarkersHuge.latlng,{icon: icon, parallaxZoffset: 6}).addTo(map);
     }
 
 

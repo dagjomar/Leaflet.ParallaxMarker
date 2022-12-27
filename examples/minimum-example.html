@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>Floating Label | Leaflet.Marker.Parallax Demo</title>
@@ -52,12 +53,10 @@
         The following example will stack a bunch of markers on top of each other in the z-axis
         Notice that the offset doubles by a factor of 2 for a nice realistic effect
     */
-    L.Marker.parallax(center,{ parallaxZoffset: 0}).addTo(map);
-    L.Marker.parallax(center,{ parallaxZoffset: 2}).addTo(map);
-    L.Marker.parallax(center,{ parallaxZoffset: 4}).addTo(map);
-    L.Marker.parallax(center,{ parallaxZoffset: 8}).addTo(map);
-    L.Marker.parallax(center,{ parallaxZoffset: 16}).addTo(map);
-    L.Marker.parallax(center,{ parallaxZoffset: 32}).addTo(map);
+    L.Marker.parallax(center,{ parallaxZoffset: 0}).addTo(map)
+    for (let parallaxMarker of [...Array(6).keys()].slice(1)) {
+        L.Marker.parallax(center,{ parallaxZoffset: 2 ** parallaxMarker}).addTo(map)
+    }
 
 
 </script>
