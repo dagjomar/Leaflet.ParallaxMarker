@@ -18,6 +18,7 @@ L.Marker.Parallax = L.Marker.extend({
     onRemove: function (e) {
 
         this._map.off('move', this._onMapMove, this);
+        this._map.off('zoomstart', this._onZoomStart, this);
         L.Marker.prototype.onRemove.call(this, e);
 
     },
