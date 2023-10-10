@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>Clouds | Leaflet.Marker.Parallax Demo</title>
@@ -31,7 +32,7 @@
     }).addTo(map);
 
 
-    var cloudsMedium = [
+    var cloudsMediums = [
         {latlng: {lat: 63.42287395311381, lng: 10.387744903564455} },
         {latlng:  {lat: 63.42425634961289, lng: 10.40782928466797} },
         {latlng: {lat: 63.419648101985715, lng: 10.42302131652832} },
@@ -43,12 +44,12 @@
     ]
 
 
-    for(var i = 0; i < cloudsMedium.length; i++){
-        var icon =  L.divIcon({className: 'parallax-cloud medium',  html: '<img src="cloud.png" width="152" height="84">', iconSize: [152, 84], iconAnchor: [76, 42]});
-        L.Marker.parallax(cloudsMedium[i].latlng,{icon: icon, parallaxZoffset: 2, opacity: 0.6}).addTo(map);
+    var icon =  L.divIcon({className: 'parallax-cloud medium',  html: '<img src="cloud.png" width="152" height="84">', iconSize: [152, 84], iconAnchor: [76, 42]});
+    for(let cloudsMedium of cloudsMediums){
+        L.Marker.parallax(cloudsMedium.latlng,{icon: icon, parallaxZoffset: 2, opacity: 0.6}).addTo(map);
     }
 
-    var cloudsBig = [
+    var cloudsBigs = [
         {latlng: {lat: 63.417103647850126, lng: 10.403537750244142} },
         {latlng: {lat: 63.42241313946417, lng: 10.41984558105469} },
         {latlng: {lat: 63.41611461038977, lng: 10.427742004394533} },
@@ -57,21 +58,21 @@
         {latlng: {lat: 63.413963576186994, lng: 10.37238121032715} }
     ]
 
-    for(var i = 0; i < cloudsBig.length; i++){
-        var icon =  L.divIcon({className: 'parallax-cloud big',  html: '<img src="sun.png" width="110" height="110">', iconSize: [200, 110], iconAnchor: [100, 55]});
-        L.Marker.parallax(cloudsBig[i].latlng,{icon: icon, parallaxZoffset: 10, opacity: 0.4}).addTo(map);
+    var icon =  L.divIcon({className: 'parallax-cloud big',  html: '<img src="sun.png" width="110" height="110">', iconSize: [200, 110], iconAnchor: [100, 55]});
+    for(let cloudsBig of cloudsBigs){
+        L.Marker.parallax(cloudsBig.latlng,{icon: icon, parallaxZoffset: 10, opacity: 0.4}).addTo(map);
     }
 
 
-    var cloudsHuge = [
+    var cloudsHuges = [
         {latlng:  {lat: 63.41100564066071, lng: 10.409631729125978} },
         {latlng:  {lat: 63.42056981078019, lng: 10.370063781738281} },
         {latlng:  {lat: 63.42602264811434, lng: 10.4205322265625} },
     ]
 
-    for(var i = 0; i < cloudsHuge.length; i++){
-        var icon =  L.divIcon({className: 'parallax-cloud huge',  html: '<img src="cloud.png" width="600" height="330">', iconSize: [600, 330], iconAnchor: [300, 165]});
-        L.Marker.parallax(cloudsHuge[i].latlng,{icon: icon, parallaxZoffset: 20, opacity: 0.3}).addTo(map);
+    var icon =  L.divIcon({className: 'parallax-cloud huge',  html: '<img src="cloud.png" width="600" height="330">', iconSize: [600, 330], iconAnchor: [300, 165]});
+    for(let cloudsHuge of cloudsHuges){
+        L.Marker.parallax(cloudsHuge.latlng,{icon: icon, parallaxZoffset: 20, opacity: 0.3}).addTo(map);
     }
 
     //map.setCenter(paraMarker.getLatLng());
