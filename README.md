@@ -1,3 +1,10 @@
+# ARCHIVED!
+
+This repository is not maintained, and is not updated to work with Leaflet v2.0 either.
+If you like it, perhaps fork it, or reproduce it and credit the original project somehow :)
+
+BTW - I have many other interesting repositories, so check them out at https://github.com/dagjomar
+
 # Leaflet.ParallaxMarker
 
 Markers that move with a parallax effect in relation to the base map.
